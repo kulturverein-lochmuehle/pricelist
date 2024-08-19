@@ -18,14 +18,6 @@ export default eslintTs.config(
     ignores: ['dist/', 'node_modules/'],
   },
   {
-    languageOptions: {
-      parserOptions: {
-        project: true,
-        tsconfigRootDir: './',
-      },
-    },
-  },
-  {
     plugins: {
       'simple-import-sort': eslintPluginSimpleImportSort,
       'unused-imports': eslintPluginUnusedImports,
