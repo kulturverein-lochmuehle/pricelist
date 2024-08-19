@@ -1,0 +1,54 @@
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+
+  box-sizing: border-box;
+  height: 100svh;
+  gap: 20px;
+  padding: 10px;
+
+  color: #f4f4f4;
+  font-family: 'Fundamental Brigade', sans-serif;
+
+  background: #333;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px 20px;
+}
+
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+  height: calc(100% - 40px);
+  justify-content: space-evenly;
+}
+
+kvlm-pricelist-editor {
+  flex: 0;
+  min-width: 300px;
+}
+
+kvlm-pricelist-preview {
+  flex: 1;
+  min-width: 0;
+}
+
+@media print {
+  :host {
+    display: contents;
+  }
+
+  header,
+  kvlm-pricelist-editor {
+    display: none;
+  }
+
+  main {
+    display: block;
+    height: auto;
+  }
+}

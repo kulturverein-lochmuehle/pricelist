@@ -1,0 +1,43 @@
+{
+  "name": "@kvlm/pricelist",
+  "version": "0.0.1",
+  "description": "Create non-persistent price lists with print preview",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint -c eslint.config.js src/**/*.ts eslint.config.js",
+    "check": "tsc --noEmit",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "lit": "3.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.9.0",
+    "@types/eslint__eslintrc": "2.1.2",
+    "@types/eslint__js": "8.42.3",
+    "@types/node": "20.16.1",
+    "@typescript-eslint/eslint-plugin": "8.1.0",
+    "@typescript-eslint/parser": "8.1.0",
+    "eslint": "9.9.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-lit": "1.14.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-simple-import-sort": "12.1.1",
+    "eslint-plugin-unused-imports": "4.1.3",
+    "eslint-plugin-wc": "2.1.0",
+    "postcss": "8.4.41",
+    "prettier": "3.3.3",
+    "stylelint": "16.8.2",
+    "stylelint-config-rational-order": "0.1.2",
+    "stylelint-config-standard-scss": "13.1.0",
+    "stylelint-order": "6.0.4",
+    "typescript": "5.5.4",
+    "typescript-eslint": "8.1.0",
+    "vite": "5.4.1"
+  },
+  "author": "David Enke <david@kvlm.de>",
+  "license": "MIT"
+}

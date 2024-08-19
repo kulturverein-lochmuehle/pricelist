@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+@media print {
+  :host {
+    display: contents;
+  }
+}

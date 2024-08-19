@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "lib": ["esnext", "dom"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext",
+    "types": ["vite/client"],
+    "useDefineForClassFields": false
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts", "eslint.config.js", "types.d.ts"]
+}

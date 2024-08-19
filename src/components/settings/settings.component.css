@@ -1,0 +1,15 @@
+:host,
+form {
+  display: contents;
+}
+
+label {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+
+  input {
+    margin: 0;
+  }
+}

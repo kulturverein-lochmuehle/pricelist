@@ -1,0 +1,27 @@
+/**
+ * 12pt = 4.23333mm
+ * 1mm = 100cqmin / 210
+ * 1mm = 2.83465pt
+ */
+:host {
+  ---kvlm-rel-mm: calc(100cqmin / 210);
+  ---kvlm-rel-pt: calc(var(---kvlm-rel-mm) * 0.352778);
+
+  display: flex;
+  flex-flow: column nowrap;
+  padding: calc(var(--kvlm-pricelist-margin, 10) * var(---kvlm-rel-mm));
+  font-size: calc(var(--kvlm-pricelist-size, 12) * var(---kvlm-rel-pt));
+  color: #000;
+}
+
+div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(10 * var(---kvlm-rel-mm));
+
+  span:last-of-type {
+    font-family: 'Super Grotesk';
+  }
+}
