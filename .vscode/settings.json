@@ -1,14 +1,6 @@
 {
-  "cSpell.words": ["pricelist"],
-  "prettier.insertPragma": false,
-  "prettier.prettierPath": "./node_modules/prettier/index.cjs",
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
-  "stylelint.configFile": ".stylelintrc.json",
-  "stylelint.packageManager": "pnpm",
-  "stylelint.validate": ["css", "scss"],
-  "stylelint.reportNeedlessDisables": true,
-  "stylelint.reportInvalidScopeDisables": true,
-  "stylelint.reportDescriptionlessDisables": true
+  "eslint.options": {
+    "overrideConfigFile": "eslint.config.ts",
+    "flags": ["unstable_ts_config"]
+  }
 }
