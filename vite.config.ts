@@ -10,7 +10,7 @@ export default defineConfig(async () => ({
   // browser targets
   // https://vite.dev/config/build-options.html#build-target
   build: {
-    target: ['es2020', 'edge120', 'firefox117', 'chrome120', 'safari17'],
+    target: ['es2022', 'edge120', 'firefox117', 'chrome120', 'safari17'],
   },
   plugins: [
     // add type check directly to vite
