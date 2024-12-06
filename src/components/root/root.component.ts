@@ -26,7 +26,16 @@ export class Root extends LitElement {
   private settings: Settings = DEFAULT_SETTINGS;
 
   @state()
-  private data: [string, string][] = [['Bier', '2,50 €']];
+  private data: [string, string][] = [
+    ['Glühwein', '3,00 €'],
+    ['Punsch', '2,50 €'],
+    ['Bier', '2,50 €'],
+    ['Kaffee', '2,00 €'],
+    ['Naschtüte', '1,50 €'],
+    ['Paar Wiener\nmit Brötchen', '3,00 €'],
+    ['Kartoffelsuppe', '3,50 €'],
+    [' +1 Wiener', '5,00 €'],
+  ];
 
   @eventOptions({ passive: true })
   handleSettingsUpdate(event: CustomEvent<Settings>) {
