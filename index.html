@@ -1,13 +1,24 @@
-<style>
-  body {
-    margin: 0;
-  }
-
-  @media print {
-    @page {
-      margin: 0;
-    }
-  }
-</style>
-<script type="module" src="/src/index.ts"></script>
-<kvlm-pricelist></kvlm-pricelist>
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/kvlm.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KVLM: Preisliste</title>
+    <style>
+      body {
+        margin: 0;
+      }
+    
+      @media print {
+        @page {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script type="module" src="/src/index.ts"></script>
+    <kvlm-pricelist></kvlm-pricelist>
+  </body>
+</html>
