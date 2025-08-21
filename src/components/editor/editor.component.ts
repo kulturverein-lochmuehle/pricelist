@@ -13,16 +13,16 @@ import style from './editor.component.css?inline';
 
 @customElement('kvlm-pricelist-editor')
 export class Editor extends LitElement {
-  static readonly styles = unsafeCSS(style);
+  static override readonly styles = unsafeCSS(style);
 
   @query('form')
   private form!: HTMLFormElement;
 
-  @property({ type: Array, attribute: false, reflect: false })
-  private data: [string, string][] = [['', '']];
-
   @state()
   private isValid = false;
+
+  @property({ type: Array, attribute: false, reflect: false, state: true })
+  data: [string, string][] = [['', '']];
 
   #emitUpdate() {
     this.dispatchEvent(

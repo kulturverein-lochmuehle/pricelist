@@ -1,10 +1,10 @@
 import { CSS_VAR_PREFIX } from './css.utils.js';
 
-export type Settings = {
+export interface Settings {
   size: string;
   margin: string;
   format: 'portrait' | 'landscape';
-};
+}
 
 export const DEFAULT_SETTINGS: Settings = {
   size: '60', // in pt

@@ -5,9 +5,9 @@ import styles from './preview.component.css?inline';
 
 @customElement('kvlm-pricelist-preview')
 export class Preview extends LitElement {
-  static readonly styles = unsafeCSS(styles);
+  static override readonly styles = unsafeCSS(styles);
 
-  render() {
+  override render() {
     return html`<slot></slot>`;
   }
 }

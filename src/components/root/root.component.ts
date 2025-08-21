@@ -8,11 +8,12 @@ import { html, LitElement, unsafeCSS } from 'lit';
 import { customElement, eventOptions, state } from 'lit/decorators.js';
 
 import { loadCustomFonts } from '../../utils/font.utils.js';
+import type { Settings } from '../../utils/settings.utils.js';
 import {
   DEFAULT_SETTINGS,
   reflectSettingsAsCssVars,
-  type Settings,
 } from '../../utils/settings.utils.js';
+
 import styles from './root.component.css?inline';
 
 // load custom fonts once globally
@@ -20,7 +21,7 @@ await loadCustomFonts();
 
 @customElement('kvlm-pricelist')
 export class Root extends LitElement {
-  static readonly styles = unsafeCSS(styles);
+  static override readonly styles = unsafeCSS(styles);
 
   @state()
   private settings: Settings = DEFAULT_SETTINGS;
@@ -48,12 +49,12 @@ export class Root extends LitElement {
     this.data = event.detail;
   }
 
-  connectedCallback() {
+  override connectedCallback() {
     super.connectedCallback();
     reflectSettingsAsCssVars(this.settings);
   }
 
-  render() {
+  override render() {
     return html`
       <header>
         <kvlm-pricelist-settings

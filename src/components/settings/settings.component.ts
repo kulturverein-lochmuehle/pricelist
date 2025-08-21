@@ -3,11 +3,12 @@ import { customElement, eventOptions, query, state } from 'lit/decorators.js';
 import { live } from 'lit/directives/live.js';
 
 import type { Settings as SettingsData } from '../../utils/settings.utils.js';
+
 import styles from './settings.component.css?inline';
 
 @customElement('kvlm-pricelist-settings')
 export class Settings extends LitElement {
-  static readonly styles = unsafeCSS(styles);
+  static override readonly styles = unsafeCSS(styles);
 
   @query('form')
   private form!: HTMLFormElement;
@@ -18,7 +19,6 @@ export class Settings extends LitElement {
   @eventOptions({ passive: true })
   private handleInput() {
     const formData = new FormData(this.form);
-    // @ts-expect-error - dom types are not up to date
     const data = Object.fromEntries(formData.entries());
     this.#dispatchEvent({ ...this.settings, ...data });
   }
@@ -33,7 +33,7 @@ export class Settings extends LitElement {
     );
   }
 
-  render() {
+  override render() {
     return html`
       <form @input="${this.handleInput}">
         <label>

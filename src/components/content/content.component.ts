@@ -6,12 +6,12 @@ import styles from './content.component.css?inline';
 
 @customElement('kvlm-pricelist-content')
 export class Content extends LitElement {
-  static readonly styles = unsafeCSS(styles);
+  static override readonly styles = unsafeCSS(styles);
 
   @property({ type: Array, attribute: false, reflect: false })
-  private data: [string, string][] = [['', '']];
+  readonly data: [string, string][] = [['', '']];
 
-  render() {
+  override render() {
     return html`
       ${map(
         this.data,

@@ -15,7 +15,6 @@ export async function loadCustomFonts(): Promise<FontFace[]> {
         { style: 'normal', weight },
       );
 
-      // @ts-expect-error - dom lib types are incomplete
       document.fonts.add(face);
 
       return face.load();
