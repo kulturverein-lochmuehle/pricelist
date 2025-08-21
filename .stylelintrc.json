@@ -5,9 +5,9 @@
   ],
   "rules": {
     "custom-property-pattern": [
-      "^-?enke-[a-z0-9]*(-[a-z0-9]+)*$",
+      "^-?kvlm-[a-z0-9]*(-[a-z0-9]+)*$",
       {
-        "message": "Custom properties should be written in lowercase with hyphens starting with `--enke-` (or internals with a triple-slash `---enke-`)"
+        "message": "Custom properties should be written in lowercase with hyphens starting with `--kvlm-` (or internals with a triple-slash `---kvlm-`)"
       }
     ],
     "declaration-empty-line-before": null,
